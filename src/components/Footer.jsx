@@ -14,11 +14,11 @@ export default function Footer() {
   return (
     <footer className="footer footer-center p-10 bg-[#fba308] text-primary-content">
       <div>
-        <div className="flex gap-10 mb-5">
+        <div className="flex flex-col sm:flex-row gap-5 mb-5 justify-center items-center">
           <img src={Logo2} alt="Logo Servidrones" className="w-40 h-20" />
-          <div className="divider divider-horizontal"></div>
+          <div className="divider md:divider-horizontal"></div>
           <img src={Logo3} alt="Logo SENA" className="w-40 h-20" />
-          <div className="divider divider-horizontal"></div>
+          <div className="divider md:divider-horizontal"></div>
           <img src={Logo4} alt="Logo Colombia" className="w-20 h-20" />
         </div>
         <p className="font-bold uppercase">
