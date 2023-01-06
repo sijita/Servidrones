@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
@@ -7,9 +7,6 @@ export default function Form() {
     register,
     handleSubmit,
     reset,
-    watch,
-    control,
-    setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
@@ -17,14 +14,14 @@ export default function Form() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
 
-  // Please update the Access Key in the .env
-  const apiKey = process.env.PUBLIC_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+  const { REACT_APP_EMAIL_KEY } = process.env;
+  const apiKey = REACT_APP_EMAIL_KEY;
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Acme Inc",
-      subject: "New Contact Message from your Website",
+      from_name: "Servidrones página web",
+      subject: "Nuevo mensaje desde la página web",
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
@@ -118,7 +115,6 @@ export default function Form() {
           />
           {errors.message && (
             <div className="mt-1 text-red-600">
-              {" "}
               <small>{errors.message.message}</small>
             </div>
           )}
@@ -157,12 +153,12 @@ export default function Form() {
 
       {isSubmitSuccessful && isSuccess && (
         <div className="mt-3 text-sm text-center text-green-500">
-          {message || "Success. Message sent successfully"}
+          Mensaje enviado correctamente.
         </div>
       )}
       {isSubmitSuccessful && !isSuccess && (
         <div className="mt-3 text-sm text-center text-red-500">
-          {message || "Something went wrong. Please try later."}
+          Error al enviar el mensaje, intenta de nuevo.
         </div>
       )}
     </>

@@ -4,7 +4,7 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 export default function WappBtn() {
   return (
     <aside className="z-50 absolute">
-      <div className="text-center hidden sm:flex flex-col gap-8 fixed list-none bottom-10 right-10">
+      <div className="text-center flex flex-col gap-8 fixed list-none sm:bottom-10 sm:right-10 bottom-5 right-5">
         <a
           href="https://wa.me/573112635728"
           target="_blank"

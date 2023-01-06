@@ -8,17 +8,7 @@ export default function Footer() {
     {
       name: "Facebook",
       icon: <FaFacebookF />,
-      link: "https://www.facebook.com/servidronescolombia",
-    },
-    {
-      name: "Instagram",
-      icon: <FaInstagram />,
-      link: "https://www.instagram.com/servidronescolombia/",
-    },
-    {
-      name: "Twitter",
-      icon: <FaTwitter />,
-      link: "https://twitter.com/servidrones",
+      link: "https://www.facebook.com/profile.php?id=100087096844996&mibextid=ZbWKwL",
     },
   ]
   return (

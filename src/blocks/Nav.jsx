@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
 
@@ -12,17 +12,19 @@ export default function Nav() {
     },
     {
       label: "Servicios",
-      to: "/services",
+      to: "#servicios",
     },
     {
       label: "Galería",
-      to: "/gallery",
+      to: "#galeria",
     },
     {
       label: "Contacto",
-      to: "/contact",
+      to: "#contacto",
     },
   ];
+
+  const location = useLocation();
 
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-5 sticky top-0 z-50">
@@ -46,9 +48,9 @@ export default function Nav() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </button>
@@ -62,12 +64,26 @@ export default function Nav() {
           >
             {navLinks.map((link, index) => (
               <li key={index}>
-                <Link
-                  to={link.to}
-                  className="block text-base px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold"
-                >
-                  {link.label}
-                </Link>
+                {link.to.includes("#") ? (
+                  <a
+                    href={link.to}
+                    className={`block text-base px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold ${
+                      location.hash === link.to && "text-orange-400 font-bold"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.to}
+                    onClick={() => window.scroll(0, 0)}
+                    className={`block text-base px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold ${
+                      location.hash === "" && "text-orange-400 font-bold"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
