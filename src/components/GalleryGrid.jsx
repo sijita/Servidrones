@@ -33,21 +33,21 @@ export default function GalleryGrid() {
             <div className="md:p-2 p-1 w-1/2">
               <img
                 alt="gallery"
-                className=" object-cover object-center block"
+                className=" object-cover object-center block w-full h-full"
                 src={landscape1}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
               <img
                 alt="gallery"
-                className=" object-cover object-center block"
+                className=" object-cover object-center block w-full h-full"
                 src={landscape2}
               />
             </div>
             <div className="md:p-2 p-1 w-full">
               <img
                 alt="gallery"
-                className="object-cover object-center block"
+                className="object-cover object-center block w-full h-full"
                 src={landscape3}
               />
             </div>
@@ -56,21 +56,21 @@ export default function GalleryGrid() {
             <div className="md:p-2 p-1 w-full">
               <img
                 alt="gallery"
-                className="object-cover object-center block"
+                className="object-cover object-center block w-full h-full"
                 src={landscape4}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
               <img
                 alt="gallery"
-                className="object-cover object-center block"
+                className="object-cover object-center block w-full h-full"
                 src={landscape5}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
               <img
                 alt="gallery"
-                className="object-cover object-center block"
+                className="object-cover object-center block w-full h-full"
                 src={landscape6}
               />
             </div>
