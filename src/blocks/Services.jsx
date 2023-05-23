@@ -7,7 +7,6 @@ import {
   GiFarmer,
   GiBirchTrees,
 } from "react-icons/gi";
-import { BsTreeFill } from "react-icons/bs";
 import { FaShieldVirus } from "react-icons/fa";
 
 export default function Services() {
@@ -45,7 +44,7 @@ export default function Services() {
             Áreas de aplicación
           </h2>
 
-          <p className="mt-4 text-lg text-black">
+          <p className="mt-4 text-xl text-black">
             Estas son las áreas de aplicación de nuestros servicios.
           </p>
         </div>

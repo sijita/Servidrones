@@ -31,7 +31,7 @@ export default function Nav() {
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link to="/" className="flex items-center">
           <img src={Logo} className="h-9" alt="Logo de servidrones" />
-          <span className="self-center text-2xl font-bold whitespace-nowrap">
+          <span className="self-center text-3xl font-bold whitespace-nowrap">
             Servidrones
           </span>
         </Link>
@@ -67,7 +67,7 @@ export default function Nav() {
                 {link.to.includes("#") ? (
                   <a
                     href={link.to}
-                    className={`block text-base px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold ${
+                    className={`block text-xl px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold ${
                       location.hash === link.to && "text-orange-400 font-bold"
                     }`}
                   >
@@ -77,7 +77,7 @@ export default function Nav() {
                   <Link
                     to={link.to}
                     onClick={() => window.scroll(0, 0)}
-                    className={`block text-base px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold ${
+                    className={`block text-xl px-4 py-2 text-black rounded hover:bg-gray-50 hover:text-orange-400 hover:font-bold ${
                       location.hash === "" && "text-orange-400 font-bold"
                     }`}
                   >

@@ -7,26 +7,16 @@ export default function MainBanner() {
 
       <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8 flex flex-col md:flex-row gap-16">
         <div className="max-w-xl text-center sm:text-left px-5 lg:px-0">
-          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#fba308] to-[#eb8c65] text-4xl sm:text-6xl font-extrabold">
+          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#fba308] to-[#eb8c65] text-4xl sm:text-7xl font-extrabold">
             Servidrones
           </h1>
           <h1 className="text-3xl font-extrabold sm:text-5xl">
             de Colombia S.A.S
           </h1>
 
-          <p className="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-            Emprendimiento del programa fondo empreder SENA, que nace como
-            alternativa de solución en el servicio de fumigación y aspersión con
-            drones orientado a la agricultura de precisión.
+          <p className="mt-4 max-w-lg sm:text-2xl sm:leading-relaxed">
+            Emprendimiento del programa fondo empreder SENA, que nace como alternativa de solución en el servicio de fumigación y aspersión con drones orientado a la agricultura de precisión.
           </p>
-
-          <div className="mt-8 flex flex-wrap gap-4 text-center">
-            <button
-              className="w-full bg-[#fba308] btn border-0 sm:w-auto rounded-none text-md"
-            >
-              Saber más
-            </button>
-          </div>
         </div>
         <div>
           <video

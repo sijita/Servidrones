@@ -76,9 +76,6 @@ export default function GalleryGrid() {
             </div>
           </div>
         </div>
-        <button className="btn border-0 rounded-none mx-auto bg-[#fba308] w-full sm:btn-wide">
-          Ver más
-        </button>
       </div>
     </section>
   );

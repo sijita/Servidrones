@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Cards({ title, description, image }) {
   return (
     <Link
-      className="flex flex-col justify-center items-center p-8 hover:bg-[#fcb251]"
+      className="flex flex-col justify-center items-center p-8 hover:bg-[#fcb251] cursor-default"
       to="/"
     >
       {image}
